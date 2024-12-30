@@ -1,5 +1,14 @@
 import { IAgentConfig, IAgentRuntime } from '@elizaos/core';
 
+export interface ApiError {
+  response?: {
+    data?: {
+      message?: string;
+    };
+  };
+  message?: string;
+}
+
 export interface ConvergenceConfig {
   apiKey: string;
   apiSecret: string;

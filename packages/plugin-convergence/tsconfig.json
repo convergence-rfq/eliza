@@ -7,7 +7,12 @@
         "strict": true,
         "outDir": "./dist",
         "declaration": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "paths": {
+            "@elizaos/core": [
+                "../core/src"
+            ]
+        }
     },
     "include": [
         "src/**/*"

@@ -15,10 +15,10 @@ export class ConvergencePlugin {
 
   constructor(config: IAgentConfig, runtime: IAgentRuntime) {
     const convergenceConfig: ConvergenceConfig = {
-      apiKey: config.get('convergence.apiKey'),
-      apiSecret: config.get('convergence.apiSecret'),
-      endpoint: config.get('convergence.endpoint'),
-      chainId: config.get('convergence.chainId')
+      apiKey: runtime.getSetting('convergence.apiKey') || '',
+      apiSecret: runtime.getSetting('convergence.apiSecret') || '',
+      endpoint: runtime.getSetting('convergence.endpoint') || '',
+      chainId: Number(runtime.getSetting('convergence.chainId') || 0)
     };
 
     this.service = new ConvergenceService(convergenceConfig, runtime);

@@ -51,3 +51,12 @@ export const convergenceConfig = {
     }
   }
 };
+
+export function getConfig(config: IAgentConfig): ConvergenceConfig {
+  return {
+    apiKey: config.get('convergence.apiKey') as string,
+    apiSecret: config.get('convergence.apiSecret') as string,
+    endpoint: config.get('convergence.endpoint') as string,
+    chainId: config.get('convergence.chainId') as string
+  };
+}

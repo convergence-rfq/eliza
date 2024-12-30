@@ -1,5 +1,6 @@
 import { IAgentConfig, IAgentRuntime } from '@elizaos/core';
 import { ConvergencePlugin } from './ConvergencePlugin';
+import { ConvergenceConfig } from './types/core';
 
 export const convergencePlugin = {
   name: 'convergence',
